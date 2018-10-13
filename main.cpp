@@ -30,17 +30,17 @@ public:
     double daysUntilRefresh;
 };
 
-void clothingListGenerator(Item clothingCatalogue[][SUBCATEGORY_NUMBER], int weatherCondition, int days)
+void clothingListGenerator(Item clothingCatalogue[][SUBCATEGORY_NUMBER], int weatherCondition, int nights)
 {
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
-    cout << "|| Camping List || " << days << " days ||" << endl;
+    cout << "|| Camping List || " << nights << " nights ||" << endl;
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
     for (int i = 0; i < SUBCATEGORY_NUMBER; i++)
     {
         if (clothingCatalogue[weatherCondition][i].name != "blank")
         {
             cout << clothingCatalogue[weatherCondition][i].name << " x";
-            cout << 1 + int(days/clothingCatalogue[weatherCondition][i].daysUntilRefresh) << endl;
+            cout << 1 + int(nights/clothingCatalogue[weatherCondition][i].daysUntilRefresh) << endl;
         }
     }
     cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
@@ -74,7 +74,7 @@ int main()
 
     };
     int weather = 0;
-    int days = 0;
+    int nights = 0;
     while (weather < 1 || weather > 4)
     {
         cout << "Enter a number for a weather condition" << endl;
@@ -83,11 +83,11 @@ int main()
     }
 
 
-    cout << "Enter the number of days :";
-    cin >> days;
+    cout << "Enter the number of nights :";
+    cin >> nights;
     cout << endl << endl;
 
-    clothingListGenerator(itemCatalogue, weather-1, days);
+    clothingListGenerator(itemCatalogue, weather-1, nights);
 
     return 0;
 }
