@@ -2,6 +2,8 @@
 
 It uses the paramters of temperature, weather condition, nights spent, and days until items need replenished to generate a packing list. It shows a list of essentials along with their quantities.
 
+![alt text](https://github.com/joshjke/PackingListGenerator/blob/master/CampingListScreen.PNG)
+
 ## Getting Started
 
 Open the project on a C++ editor and give it a shot.
