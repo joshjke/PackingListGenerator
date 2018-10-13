@@ -83,7 +83,7 @@ int main()
     }
 
 
-    cout << "Enter the number of nights :";
+    cout << "Enter the number of nights: ";
     cin >> nights;
     cout << endl << endl;
 
